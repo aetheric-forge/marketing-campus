@@ -56,3 +56,5 @@ a shared web/admin interface or automatically mount routes in either application
 - [Campaign storage schema](docs/campaign-schema.md): field names, ownership, and legacy migration boundary.
 
 See [publication and management](docs/publication.md) for lifecycle, wire schema, host configuration, and remaining acceptance.
+
+See the [handoff](docs/handoff.md) for coordinated PRs, verified results, and remaining release acceptance.
