@@ -1,9 +1,13 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/MarketingCampus.Core/MarketingCampus.Core.csproj" />
+    <Project Path="src/MarketingCampus.Providers.MongoDb/MarketingCampus.Providers.MongoDb.csproj" />
     <Project Path="src/MarketingCampus.Institutions.Marketing/MarketingCampus.Institutions.Marketing.csproj" />
     <Project Path="src/MarketingCampus.Plugin/MarketingCampus.Plugin.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/MarketingCampus.Core.Tests/MarketingCampus.Core.Tests.csproj" />
+    <Project Path="tests/MarketingCampus.Providers.MongoDb.Tests/MarketingCampus.Providers.MongoDb.Tests.csproj" />
     <Project Path="tests/MarketingCampus.Plugin.Tests/MarketingCampus.Plugin.Tests.csproj" />
   </Folder>
 </Solution>
