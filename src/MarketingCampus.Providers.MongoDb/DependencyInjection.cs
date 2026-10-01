@@ -12,6 +12,7 @@ public static class DependencyInjection
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(database);
         services.AddSingleton<ICampaignDraftRepository>(new MongoCampaignDraftRepository(database));
+        services.AddSingleton<ICampaignPublicationRepository>(new MongoCampaignPublicationRepository(database));
         return services;
     }
 }

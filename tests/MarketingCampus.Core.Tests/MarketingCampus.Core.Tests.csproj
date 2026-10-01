@@ -11,5 +11,6 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
     <Using Include="Xunit" />
     <ProjectReference Include="../../src/MarketingCampus.Core/MarketingCampus.Core.csproj" />
+    <ProjectReference Include="../../src/MarketingCampus.Application/MarketingCampus.Application.csproj" />
   </ItemGroup>
 </Project>
