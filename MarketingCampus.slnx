@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/MarketingCampus.Application/MarketingCampus.Application.csproj" />
     <Project Path="src/MarketingCampus.Core/MarketingCampus.Core.csproj" />
     <Project Path="src/MarketingCampus.Providers.MongoDb/MarketingCampus.Providers.MongoDb.csproj" />
     <Project Path="src/MarketingCampus.Institutions.Marketing/MarketingCampus.Institutions.Marketing.csproj" />

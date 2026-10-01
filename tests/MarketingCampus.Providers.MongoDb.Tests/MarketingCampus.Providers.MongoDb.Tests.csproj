@@ -11,5 +11,6 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
     <Using Include="Xunit" />
     <ProjectReference Include="../../src/MarketingCampus.Providers.MongoDb/MarketingCampus.Providers.MongoDb.csproj" />
+    <ProjectReference Include="../../src/MarketingCampus.Application/MarketingCampus.Application.csproj" />
   </ItemGroup>
 </Project>
