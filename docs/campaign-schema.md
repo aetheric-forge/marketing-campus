@@ -67,9 +67,9 @@ Operator authorization belongs in the upcoming application operations before sto
 
 ## Publication and migration boundary
 
-Milestone 3 will define a separate `marketingPublications` collection with public snapshots and their
-publication state. Implement `(websiteId, intakePath)` uniqueness and publish/end rules together.
-This milestone does not write a public collection or expose a public reader.
+Publication operations now use a separate `marketingPublications` collection. See
+[publication and management](publication.md) for its schema, target uniqueness, and lifecycle rules.
+Public readers never query the working `marketingCampaigns` collection.
 
 Legacy tracking records lack intake, page content, and SEO metadata. Do not automatically turn old
 `Active` records into published campaigns. A future explicit import may copy suitable fields into

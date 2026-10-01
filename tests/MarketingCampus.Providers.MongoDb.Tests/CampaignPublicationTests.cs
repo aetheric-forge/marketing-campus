@@ -70,6 +70,8 @@ public sealed class CampaignPublicationTests : IAsyncLifetime
         await Management.EndAsync(first);
         var b = await Drafts.SaveAsync(Draft("second"));
         var second = await Publications.PublishAsync(b, null);
+        Assert.False((await Publications.GetForCampaignAsync(first.CampaignId))!.IsActive);
+        Assert.NotNull((await Publications.GetForCampaignAsync(first.CampaignId))!.EndedAt);
         await Assert.ThrowsAsync<CampaignPublicationConflictException>(() => Management.EndAsync(first));
         Assert.Equal(second.Version, (await Publications.GetActiveAsync("blackcircuit", "/portfolio"))!.Version);
     }

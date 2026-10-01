@@ -16,6 +16,7 @@ public interface ICampaignPublicationRepository
 {
     Task<CampaignPublication?> GetActiveAsync(string websiteId, string intakePath, CancellationToken cancellationToken = default);
     Task<CampaignPublication?> GetActiveForCampaignAsync(string campaignId, CancellationToken cancellationToken = default);
+    Task<CampaignPublication?> GetForCampaignAsync(string campaignId, CancellationToken cancellationToken = default);
     Task<CampaignPublication> PublishAsync(CampaignDraft draft, string? expectedVersion, CancellationToken cancellationToken = default);
     Task EndAsync(string campaignId, string websiteId, string intakePath, string expectedVersion, CancellationToken cancellationToken = default);
 }

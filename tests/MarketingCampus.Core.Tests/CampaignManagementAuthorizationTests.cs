@@ -16,6 +16,7 @@ public sealed class CampaignManagementAuthorizationTests
         await Assert.ThrowsAsync<UnauthorizedAccessException>(() => service.GetAsync("launch"));
         await Assert.ThrowsAsync<UnauthorizedAccessException>(() => service.SaveAsync(draft));
         await Assert.ThrowsAsync<UnauthorizedAccessException>(() => service.GetActivePublicationAsync("launch"));
+        await Assert.ThrowsAsync<UnauthorizedAccessException>(() => service.GetPublicationAsync("launch"));
         await Assert.ThrowsAsync<UnauthorizedAccessException>(() => service.PublishAsync("launch", 1, null));
         await Assert.ThrowsAsync<UnauthorizedAccessException>(() => service.EndAsync(publication));
     }
@@ -33,6 +34,7 @@ public sealed class CampaignManagementAuthorizationTests
         public Task DeleteAsync(string id, long expectedRevision, CancellationToken cancellationToken = default) => throw new InvalidOperationException("Storage reached");
         public Task<CampaignPublication?> GetActiveAsync(string websiteId, string path, CancellationToken cancellationToken = default) => throw new InvalidOperationException("Storage reached");
         public Task<CampaignPublication?> GetActiveForCampaignAsync(string id, CancellationToken cancellationToken = default) => throw new InvalidOperationException("Storage reached");
+        public Task<CampaignPublication?> GetForCampaignAsync(string id, CancellationToken cancellationToken = default) => throw new InvalidOperationException("Storage reached");
         public Task<CampaignPublication> PublishAsync(CampaignDraft draft, string? expectedVersion, CancellationToken cancellationToken = default) => throw new InvalidOperationException("Storage reached");
         public Task EndAsync(string id, string website, string path, string version, CancellationToken cancellationToken = default) => throw new InvalidOperationException("Storage reached");
     }

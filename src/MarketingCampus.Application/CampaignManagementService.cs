@@ -37,6 +37,12 @@ public sealed class CampaignManagementService(
         return await publications.GetActiveForCampaignAsync(id, cancellationToken);
     }
 
+    public async Task<CampaignPublication?> GetPublicationAsync(string id, CancellationToken cancellationToken = default)
+    {
+        await authorizer.EnsureCanManageAsync(cancellationToken);
+        return await publications.GetForCampaignAsync(id, cancellationToken);
+    }
+
     public async Task<CampaignPublication> PublishAsync(
         string id, long expectedDraftRevision, string? expectedVersion, CancellationToken cancellationToken = default)
     {

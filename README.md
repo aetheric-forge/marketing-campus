@@ -8,7 +8,8 @@ Initial target hosts are Black Circuit and Aetheric Forge, with separate public 
 The runtime institution foundation and milestone 2 campaign model/storage are implemented. Drafts
 contain website targets, intake paths, audience/objective, page content, offerings, and SEO metadata.
 Mongo persistence validates writes and uses optimistic revisions to reject conflicting edits.
-Management UI, publication operations, public readers, and actual host wiring remain subsequent work.
+Publication/end operations and operator authorization are implemented. Admin and public host adapters
+are provided in coordinated host PRs; see the publication guide for acceptance and deployment status.
 Loading the runtime foundation alone does not register storage or publish content.
 
 The runtime is pinned to `d70a8bdc87769c1e8ea2c8184a541216b03033e4` through the `runtime` Git submodule.
@@ -42,6 +43,7 @@ a shared web/admin interface or automatically mount routes in either application
 ## Layout
 
 - `src/MarketingCampus.Institutions.Marketing`: Marketing runtime identity and institution.
+- `src/MarketingCampus.Application`: authorized management and publication operations.
 - `src/MarketingCampus.Core`: draft content, validation, and the campaign-specific repository boundary.
 - `src/MarketingCampus.Providers.MongoDb`: durable drafts and optional host service registration.
 - `src/MarketingCampus.Plugin`: definition and runtime plugin entry point.
@@ -52,3 +54,5 @@ a shared web/admin interface or automatically mount routes in either application
 - [v0.1 plan](docs/v0.1-plan.md): scope, milestones, and release acceptance.
 - [Integration convention](docs/integration.md): public/admin responsibilities and initial host touchpoints.
 - [Campaign storage schema](docs/campaign-schema.md): field names, ownership, and legacy migration boundary.
+
+See [publication and management](docs/publication.md) for lifecycle, wire schema, host configuration, and remaining acceptance.
