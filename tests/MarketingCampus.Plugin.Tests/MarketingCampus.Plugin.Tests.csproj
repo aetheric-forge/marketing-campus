@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/MarketingCampus.Plugin/MarketingCampus.Plugin.csproj" />
+    <ProjectReference Include="../../runtime/src/Institutions/AethericForge.Runtime.Institutions.Plugins/AethericForge.Runtime.Institutions.Plugins.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../src/MarketingCampus.Plugin/bin/$(Configuration)/net10.0/MarketingCampus.Plugin.deps.json"
+          Link="MarketingCampus.Plugin.deps.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

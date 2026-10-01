@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MarketingCampus.Institutions.Marketing/MarketingCampus.Institutions.Marketing.csproj" />
+    <Project Path="src/MarketingCampus.Plugin/MarketingCampus.Plugin.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MarketingCampus.Plugin.Tests/MarketingCampus.Plugin.Tests.csproj" />
+  </Folder>
+</Solution>
